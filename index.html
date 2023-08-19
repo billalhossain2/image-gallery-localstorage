@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery Locla Storage</title>
+    <style>
+        .gallery-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top:50px;
+        }
+
+        .upload-btn, .remove-btn{
+            background: #14cfcf;
+            color:#fff;
+            padding:8px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            margin-top:10px;
+            cursor: pointer;
+        }
+
+        .remove-btn{
+            background: #6e1313;
+            display: none;
+        }
+
+
+
+        #image-input-field{
+            padding:5px 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        #gallery{
+            margin-top:30px;
+        }
+
+        #gallery img{
+            width:200px;
+            height: 150px;
+            margin:3px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Let's go...</h1>
+    <div class="gallery-container">
+        <form action="">
+            <input type="file" name="image" id="image-input-field">
+            <br>
+            <button id="upload-btn" class="upload-btn">Upload</button>
+        </form>
+        <div id="gallery">
+            
+        </div>
+        <button onclick="removeAll()" class="remove-btn" id="remove-btn">Remove All</button>
+    </div>
+
     <script src="./js/gallery.js"></script>
 </body>
 </html>
